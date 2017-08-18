@@ -4,29 +4,34 @@
 //    background-image: 
 //        url(../assets/bg_text.png);
     position: relative;
-    perspective: 1000px;
-    overflow: hidden;
+    margin: 0 auto;
+    background-image: 
+        url(../assets/bg_text.png);
+//    background-size: cover;
+    background-repeat: repeat-y;
+    background-position: center center;
     
     video {
-        z-index: 1;
-        position: absolute;
-        top: 0; left: 0; right: 0;
-        margin: auto;
+        z-index: 1; 
+//        position: absolute;
+//        top: 0; left: 0; right: 0;
+//        margin: auto;
         object-fit: contain;
-        width: 100%;
+//        width: 100%;
         height: 100%;
+        mix-blend-mode: multiply;
         }
     
-    .done-undone {
-        position: absolute;
-        z-index: 2;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background-image: 
-            url(../assets/bg_text.png);
-        background-size: cover; 
+//    .done-undone {
+//        position: absolute;
+//        z-index: 2;
+//        top: 0; left: 0; right: 0; bottom: 0;
+//        background-image: 
+//            url(../assets/bg_text.png);
+//        background-size: cover; 
+////        mix-blend-mode: overlay;
+//        opacity: .8; 
+//        filter: blur(1px);        
 //        mix-blend-mode: overlay;
-        opacity: .8; 
-        filter: blur(1px);        
-        mix-blend-mode: overlay;
-        }
+//        }
     }
