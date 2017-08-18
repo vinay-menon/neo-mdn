@@ -23,9 +23,7 @@
         top: 0; left: 0; right: 0; bottom: 0;
         background-image: 
             url(../assets/bg_text.png);
-//        background-size: cover; 
-        background-position: 50% 50%;
-        background-repeat: repeat-y;
+        background-size: cover; 
         mix-blend-mode: overlay;
         opacity: .8; 
         filter: blur(1px);

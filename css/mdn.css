@@ -187,8 +187,7 @@ nav.nav-open {
     right: 0;
     bottom: 0;
     background-image: url(../assets/bg_text.png);
-    background-position: 50% 50%;
-    background-repeat: repeat-y;
+    background-size: cover;
     mix-blend-mode: overlay;
     opacity: .8;
     filter: blur(1px); }
