@@ -189,6 +189,7 @@ nav.nav-open {
     background-image: url(../assets/bg_text.png);
     background-size: cover;
     opacity: .8;
-    filter: blur(1px); }
+    filter: blur(1px);
+    mix-blend-mode: overlay; }
 
 /*# sourceMappingURL=mdn.css.map */
