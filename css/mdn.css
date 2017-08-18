@@ -191,7 +191,6 @@ nav.nav-open {
     background-repeat: repeat-y;
     mix-blend-mode: overlay;
     opacity: .8;
-    filter: blur(1px);
-    transform: rotateY(-40deg); }
+    filter: blur(1px); }
 
 /*# sourceMappingURL=mdn.css.map */
