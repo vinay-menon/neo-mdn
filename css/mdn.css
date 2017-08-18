@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css?family=Kanit:600,900");
+/* line 5, E:/work/web dev/mdn/neo website/css/mdn.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/* line 11, E:/work/web dev/mdn/neo website/css/mdn.scss */
+body {
+  background-color: #000;
+  font-family: 'Kanit', sans-serif;
+  transform-style: preserve-3d; }
+
+/* line 18, E:/work/web dev/mdn/neo website/css/mdn.scss */
+body.shade-overlay:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7); }
+
+/**********
+* NAV 
+**********/
+/* line 30, E:/work/web dev/mdn/neo website/css/mdn.scss */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 0;
+  background-color: white;
+  transition: .5s;
+  text-align: center;
+  z-index: 999; }
+
+/* line 41, E:/work/web dev/mdn/neo website/css/mdn.scss */
+.nav-item-wrapper:hover .nav-item {
+  opacity: .5; }
+
+/* line 44, E:/work/web dev/mdn/neo website/css/mdn.scss */
+.nav-item-wrapper:hover .nav-item:hover {
+  opacity: 1; }
+
+/* line 48, E:/work/web dev/mdn/neo website/css/mdn.scss */
+nav.nav-open {
+  max-width: 250px; }
+
+/* line 52, E:/work/web dev/mdn/neo website/css/mdn.scss */
+.nav-item {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: .5s;
+  opacity: 0;
+  pointer-events: none; }
+
+/* line 63, E:/work/web dev/mdn/neo website/css/mdn.scss */
+.nav-open .nav-item {
+  opacity: 1;
+  pointer-events: auto; }
+
+/**********
+* NAV CLOSE BUTTON
+**********/
+/* line 1, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+#nav-trigger {
+  position: absolute;
+  left: calc(100% + 20px);
+  top: 20px;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0; }
+  /* line 10, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+  #nav-trigger:hover {
+    animation: .3s nav-bounce; }
+
+@keyframes nav-bounce {
+  50% {
+    height: 40px;
+    margin-top: -5px; }
+  100% {
+    height: 30px;
+    margin-top: 0; } }
+
+/* line 26, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+#nav-trigger i {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: white;
+  transform-origin: 50% 50%;
+  transition: .3s; }
+
+/* line 34, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+#nav-trigger i:first-child {
+  top: 0;
+  transition-delay: .1s; }
+
+/* line 38, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+#nav-trigger i:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  transition-delay: .2s; }
+
+/* line 43, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+#nav-trigger i:last-child {
+  bottom: 0;
+  transition-delay: .1s; }
+
+/* line 48, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+.nav-open #nav-trigger i:first-child {
+  animation: .5s nav-trigger-1;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+/* line 53, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+.nav-open #nav-trigger i:nth-child(2) {
+  animation: .5s nav-trigger-2;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+/* line 58, E:/work/web dev/mdn/neo website/css/components/_component_nav-trigger.scss */
+.nav-open #nav-trigger i:last-child {
+  animation: .5s nav-trigger-3;
+  animation-direction: normal;
+  animation-fill-mode: forwards; }
+
+@keyframes nav-trigger-1 {
+  50% {
+    top: 50%;
+    transform: translateY(-50%); }
+  100% {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg); } }
+
+@keyframes nav-trigger-2 {
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 0; } }
+
+@keyframes nav-trigger-3 {
+  50% {
+    bottom: 50%;
+    transform: translateY(50%); }
+  100% {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg); } }
+
+/**********
+* HEADER 
+**********/
+/* line 1, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
+.header {
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  perspective: 1000px;
+  overflow: hidden; }
+  /* line 10, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
+  .header video {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    height: 100%;
+    object-fit: cover; }
+  /* line 19, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
+  .header .done-undone {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(../assets/bg_text.png);
+    background-position: 50% 50%;
+    background-repeat: repeat-y;
+    mix-blend-mode: overlay;
+    opacity: .8;
+    filter: blur(1px);
+    transform: rotateY(-40deg); }
+
+/*# sourceMappingURL=mdn.css.map */

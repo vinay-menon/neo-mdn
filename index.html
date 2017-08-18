@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MDN</title>
+    
+    <link rel="stylesheet" href="css/mdn.css">
+</head>
+<body>
+
+<div class="nav-container">
+    <nav>
+        <div class="nav-item-wrapper">
+            <div class="nav-item">Works</div>
+            <div class="nav-item">About</div>
+            <div class="nav-item">Contact</div>
+        </div>
+
+        <button id="nav-trigger">
+            <i></i>
+            <i></i>
+            <i></i>
+        </button>
+    </nav>	
+</div>
+   
+<section class="header">
+    <video src="assets/bg_vid.mp4" autoplay loop></video>
+    <div class="done-undone"></div>
+</section>
+    
+<script>
+    var navTrigger = document.querySelector("#nav-trigger");
+    var nav = document.querySelector("nav");
+    var body = document.querySelector("body");
+    
+    navTrigger.addEventListener("click", function(){
+        nav.classList.toggle('nav-open');
+        body.classList.toggle('shade-overlay');
+    });
+</script>
+
+
+</body>
+</html>

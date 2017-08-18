@@ -1,0 +1,90 @@
+//@import url('https://fonts.googleapis.com/css?family=Muli:300,900');
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:600,900');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	}
+
+body {  
+    background-color: #000;
+//    font-family: 'Muli', sans-serif;
+    font-family: 'Kanit', sans-serif;         
+    transform-style: preserve-3d;
+    }
+
+body.shade-overlay:before {
+    content: "";
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;                             
+    background-color: hsla(0,0,0,.7);    
+    }        
+  
+ 
+/**********
+* NAV 
+**********/
+
+nav {
+	position: fixed;
+	top: 0; left: 0; bottom: 0;         
+    width: 100%;
+    max-width: 0;
+	background-color: white;
+    transition: .5s;
+    text-align: center;
+    z-index: 999;         
+	}
+
+.nav-item-wrapper:hover .nav-item {
+    opacity: .5;
+    }
+.nav-item-wrapper:hover .nav-item:hover {
+    opacity: 1;
+    }
+
+nav.nav-open {
+    max-width: 250px;
+	}
+
+.nav-item {
+	font-weight: 900;
+	font-size: 2rem;
+	margin: 20px;
+	text-transform: uppercase;
+	cursor: pointer; 
+    transition: .5s;
+    opacity: 0;
+    pointer-events: none;
+	}
+
+.nav-open .nav-item {
+    opacity: 1;
+    pointer-events: auto;    
+    }
+
+
+/**********
+* NAV CLOSE BUTTON
+**********/
+
+@import "components/_component_nav-trigger";
+    
+
+/**********
+* HEADER 
+**********/   
+
+@import "components/_component_header";
+
+
+
+
+
+
+
+
+
+

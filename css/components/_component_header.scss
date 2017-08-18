@@ -1,0 +1,33 @@
+.header {
+    height: 100vh;
+	background-color: hsla(0,0,0,1);
+//    background-image: 
+//        url(../assets/bg_text.png);
+    position: relative;
+    perspective: 1000px;
+    overflow: hidden;
+    
+    video {
+        position: absolute;
+        left: 0; right: 0;
+        margin: auto;
+        z-index: 1;
+        height: 100%;
+        object-fit: cover; 
+        }
+    
+    .done-undone {
+        position: absolute;
+        z-index: 2;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background-image: 
+            url(../assets/bg_text.png);
+//        background-size: cover; 
+        background-position: 50% 50%;
+        background-repeat: repeat-y;
+        mix-blend-mode: overlay;
+        opacity: .8;
+        filter: blur(1px);
+        transform: rotateY(-40deg);
+        }
+    }
