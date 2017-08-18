@@ -22,7 +22,7 @@ body.shade-overlay:before {
   background-color: rgba(0, 0, 0, 0.7); }
 
 /**********
-* NAV 
+* NAV  
 **********/
 /* line 30, E:/work/web dev/mdn/neo website/css/mdn.scss */
 nav {
@@ -188,7 +188,6 @@ nav.nav-open {
     bottom: 0;
     background-image: url(../assets/bg_text.png);
     background-size: cover;
-    mix-blend-mode: overlay;
     opacity: .8;
     filter: blur(1px); }
 
