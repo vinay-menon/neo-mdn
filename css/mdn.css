@@ -163,17 +163,19 @@ nav.nav-open {
 /* line 1, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
 .header {
   height: 100vh;
+  max-height: 100vh;
   background-color: black;
   position: relative;
   margin: 0 auto;
   background-image: url(../assets/bg_text.png);
   background-repeat: repeat-y;
   background-position: center center; }
-  /* line 14, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
+  /* line 15, E:/work/web dev/mdn/neo website/css/components/_component_header.scss */
   .header video {
     z-index: 1;
     object-fit: contain;
     height: 100%;
+    width: 100%;
     mix-blend-mode: multiply; }
 
 /*# sourceMappingURL=mdn.css.map */
